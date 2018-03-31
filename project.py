@@ -77,9 +77,9 @@ def gconnect():
     stored_access_token = login_session.get('access_token')	
     stored_gplus_id = login_session.get('gplus_id')
     if stored_access_token is not None and gplus_id == stored_gplus_id:
-        respose = make_response(json.dumps('Current user is already connected.'),200)
-	    response.headers['Content-Type']='application/json'
-   	    return response
+        respnose = make_response(json.dumps('Current user is already connected.'),200)
+	response.headers['Content-Type']='application/json'
+   	return response
 
     login_session['access_token']= credentials.access_token
     login_session['gplus_id']=gplus_id
